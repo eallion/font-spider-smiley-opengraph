@@ -1,0 +1,4 @@
+*.ttf
+*.otf
+./font
+./font_*
