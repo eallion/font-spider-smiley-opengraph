@@ -17,7 +17,10 @@ cat summary.json | jq -r '.summaries[] | "<h1>\(.title)</h1>"' | sed -e '/<body>
 font-spider index.html --no-backup --debug
 ```
 
-`SmileySans.ttf` 字体文件放到当前目录，把生成后的字体复制到本项目 `Public` 中。  
+`NotoSerifCJKsc-Regular.ttf` 字体文件放到当前目录，把生成后的字体复制到目标项目 [`Public`](https://github.com/eallion/vercel.og/tree/main/public) 中。  
+
+`summary.json` 内容来自博客仓库 <https://github.com/eallion/eallion.com/blob/main/data/summary/summary.json>
+
 `import.html` 内容：
 
 ```html
@@ -29,14 +32,14 @@ font-spider index.html --no-backup --debug
     <title>Document</title>
     <style>
         @font-face {
-            font-family: 'SmileySans';
-            src: url('SmileySans.ttf') format('truetype');
+            font-family: 'import.html';
+            src: url('NotoSerifCJKsc-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
         h1,
         p {
-            font-family: 'SmileySans',sans-serif;
+            font-family: 'import.html',sans-serif;
         }
     </style>
 </head>
